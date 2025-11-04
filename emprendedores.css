@@ -1,0 +1,257 @@
+/* -------- MOBILE FIRST -------- */
+:root {
+  --naranja: #ff6902;
+  --blanco: #fff;
+  --negro: #222;
+  --gris: #666;
+  --fuente: 'Arial', sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  color: var(--negro);
+  background-color: var(--blanco);
+}
+
+/* HEADER */
+.hero {
+    color: var(--blanco);
+    text-align: center;
+    padding: 20rem 1rem 2rem;
+    position: relative;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.navbar img {
+    height: 40px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.hero h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+/* HEADER DE CATEGORÍA */
+.category-header {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.category-header h1 {
+  color: var(--naranja);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* SEARCH BAR */
+.search-section {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  flex: 1;
+  max-width: 300px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+  border: none;
+  background-color: var(--naranja);
+  color: var(--blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* PRODUCTOS */
+.featured {
+  margin: 60px 20px;
+  padding: 1rem;
+}
+
+.featured h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--naranja);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; 
+}
+
+.product .description {
+  margin-bottom: 1rem; /* separa descripción del precio */
+}
+
+.product .price {
+  margin-top: 1rem;
+}
+
+.product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.6rem;
+  cursor:pointer;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.product h3, .product .price {
+  color: var(--naranja);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product .seller {
+  color: var(--gris);
+  font-size: 0.7rem;
+  margin: 0.2rem 0;
+  margin-bottom: 0.6rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--naranja);
+  color: var(--blanco);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo img {
+  height: 80px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-columns h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-columns ul {
+  list-style: none;
+}
+
+.footer-columns a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.social {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.icons img {
+  height: 25px;
+}
+
+/* -------- MEDIA QUERIES -------- */
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+    .category-header h1 {
+        color: var(--naranja);
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+  .category-header h1 {
+    font-size: 4rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-columns {
+    text-align: left;
+  }
+
+  /* Productos */
+  .product {
+    font-size: 0.8rem; /* descripción general */
+  }
+
+  .product h3, .product .price {
+    font-size: 1.2rem; /* nombre y precio */
+  }
+
+  .product .seller {
+    font-size: 0.8rem; /* texto “por Varios” */
+  }
+
+  .product .description p {
+    font-size: 0.9rem;
+  }
+}

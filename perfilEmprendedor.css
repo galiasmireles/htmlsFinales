@@ -1,0 +1,239 @@
+/* -------- BASE -------- */
+:root {
+  --naranja: #ff6902;
+  --blanco: #fff;
+  --negro: #222;
+  --gris: #666;
+  --fuente: 'Arial', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  color: var(--negro);
+  background-color: var(--blanco);
+}
+
+/* -------- HEADER -------- */
+.hero {
+  color: var(--blanco);
+  text-align: center;
+  padding: 20rem 1rem 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.navbar img {
+  height: 40px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+/* -------- PERFIL -------- */
+.perfil {
+  max-width: 1000px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.perfil-imagen img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: left;
+  margin-right: 2rem;
+}
+
+.perfil-info h1 {
+  color: var(--naranja);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.perfil-info p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* -------- CONTACTO -------- */
+.contacto {
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contacto h2 {
+  color: var(--naranja);
+  margin-bottom: 2rem;
+}
+
+.contacto-contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contacto-contenedor h3 {
+  color: var(--negro);
+  margin-bottom: 0.5rem;
+}
+
+.contacto-contenedor p {
+  color: var(--gris);
+  font-size: 0.95rem;
+}
+
+/* -------- PRODUCTOS -------- */
+.productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin: 4rem 0;
+}
+
+.productos-texto {
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.productos-texto h2 {
+  color: var(--naranja);
+  margin-bottom: 1rem;
+}
+
+.productos-texto p {
+  margin-bottom: 1.5rem;
+  color: var(--gris);
+  line-height: 1.6;
+}
+
+.btn-ver {
+  background-color: var(--naranja);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-ver:hover {
+  background-color: #e05800;
+}
+
+.productos-imagen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* -------- FOOTER -------- */
+.footer {
+  background-color: var(--naranja);
+  color: var(--blanco);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo img {
+  height: 80px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-columns h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-columns ul {
+  list-style: none;
+}
+
+.footer-columns a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.social {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.icons img {
+  height: 25px;
+}
+
+/* -------- MEDIA QUERIES -------- */
+@media (min-width: 768px) {
+  .contacto-contenedor {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .productos {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .productos-texto, .productos-imagen {
+    width: 50%;
+  }
+
+  .productos-imagen img {
+    height: 100%;
+  }
+}
