@@ -268,7 +268,7 @@ body {
 } */
 
 /* DESKTOP */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -314,4 +314,5 @@ body {
     .product .description p {
         font-size: 0.9rem;
     }
+
 }
